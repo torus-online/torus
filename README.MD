@@ -1,3 +1,4 @@
+![Torus logo](https://torus-ui.azurewebsites.net/assets/logo.png)
 # TORUS
 ### Redefining global digital productivity
 
