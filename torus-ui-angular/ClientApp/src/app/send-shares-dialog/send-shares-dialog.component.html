@@ -1,0 +1,44 @@
+<h2 mat-dialog-title>Send Shares</h2>
+<mat-dialog-content class="mat-typography">
+  <form *ngIf="state === sendSharesDialogComponentState.FormInput" #formElement [formGroup]="form">
+    <mat-form-field id="address-selector" class="example-full-width">
+      <mat-select name="account" formControlName="sendFrom" (selectionChange)="refreshBalance()" placeholder="Address">
+        <mat-option *ngFor="let account of accounts" [value]="account">{{account}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p>Balance: <span id="balance">{{balance}}</span> shares</p>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Send to</mat-label>
+      <input type="text"
+            placeholder="recipient's wallet address, e.g. 782783n4d9928n7d293784n2394724"
+            aria-label="Number"
+            matInput
+            formControlName="sendTo"
+            [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let pKey of filteredPublicKeys | async" [value]="pKey">
+          {{pKey}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <mat-label>Number of shares</mat-label>
+    <mat-slider
+      formControlName="amount"
+      class="example-full-width"
+      thumbLabel
+      tickInterval="auto"
+      min="1"
+      [max]="balance">
+    </mat-slider>
+  </form>
+  <torus-sending-transaction
+    *ngIf="state === sendSharesDialogComponentState.FormSubmutted"
+    [transactionPromise]="transactionPromise"
+  ></torus-sending-transaction>
+</mat-dialog-content>
+<mat-dialog-actions *ngIf="state === sendSharesDialogComponentState.FormInput" align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-flat-button (click)="sendShares()" color="accent">Send</button>
+</mat-dialog-actions>

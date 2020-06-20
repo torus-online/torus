@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Cookie Consent</h2>
+<mat-dialog-content class="mat-typography">
+  <p>This website uses cookies to save your personal information for you between visits. Information in your cookies will never be sold or used for advertising purposes.</p>
+  <mat-checkbox
+    color="primary"
+    [formControl]="consentCheckbox"
+  >
+    I consent to the use of cookies on this website
+  </mat-checkbox>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="false">Cancel</button>
+  <button mat-flat-button [disabled]="consentCheckbox.invalid" [mat-dialog-close]="true" color="accent">OK</button>
+</mat-dialog-actions>

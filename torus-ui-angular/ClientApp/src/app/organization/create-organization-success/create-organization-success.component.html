@@ -1,0 +1,9 @@
+<p>Nice work! You've created your first decentralized organization, and you currently own all {{totalShares$ | async}} shares!</p>
+<h1 class="mat-headline">WRITE THIS DOWN</h1>
+<h3 class="mat-subheading-2">{{contractAddress$ | async}}</h3>
+<mat-checkbox color="primary" [formControl]="saveOrgCheckbox">Save for next time</mat-checkbox>
+<p>This is the address of your organization contract's address on the blockchain. <strong>You will need to keep this address safe.</strong> It's required to view and interact with your organization, and we do not store a copy of it.</p>
+<p>Let's get started! Send your shares to add shareholders.</p>
+<button mat-raised-button [routerLink]="['/' + (contractAddress$ | async) ]" color="accent">
+  Get started
+</button>

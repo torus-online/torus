@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>Move</h2>
+<mat-dialog-content class="mat-typography">
+  <form *ngIf="state === sendSharesDialogComponentState.FormInput" #formElement [formGroup]="form">
+    <mat-form-field class="example-full-width">
+      <mat-select formControlName="action" placeholder="Proposal type">
+        <mat-option *ngFor="let a of proposalActions" [value]="a.value">{{a.label}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="proposalAction === organizationProposalAction.addBoardMember" class="example-full-width">
+      <mat-label>Candidate address</mat-label>
+      <input type="text"
+            placeholder="Candidate's wallet address, e.g. 0x782783n4d9928n7d293"
+            aria-label="Number"
+            matInput
+            formControlName="pubKey"
+            [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let pKey of filteredPublicKeys | async" [value]="pKey">
+          {{pKey}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="proposalAction === organizationProposalAction.removeBoardMember" class="example-full-width">
+      <mat-select formControlName="pubKey" placeholder="Board member to remove">
+        <mat-option *ngFor="let member of currentBoardMembers$ | async" [value]="member">{{member}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field id="address-selector" class="example-full-width">
+      <mat-select name="account" formControlName="from" placeholder="Your address">
+        <mat-option *ngFor="let account of accounts" [value]="account">{{account}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <torus-sending-transaction
+    *ngIf="state === sendSharesDialogComponentState.FormSubmutted"
+    [transactionPromise]="transactionPromise"
+  ></torus-sending-transaction>
+</mat-dialog-content>
+<mat-dialog-actions *ngIf="state === sendSharesDialogComponentState.FormInput" align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-flat-button (click)="propose()" color="accent">Propose</button>
+</mat-dialog-actions>

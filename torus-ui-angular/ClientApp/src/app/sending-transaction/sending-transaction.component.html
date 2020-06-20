@@ -1,0 +1,29 @@
+<ng-container *ngIf="state === sendingTransactionComponentState.AwaitingUserConfirmation">
+  <h3 class="mat-subheading-2">Action Required</h3>
+  <p>You should be seeing a confirmation notification from MetaMask as shown below:</p>
+  <img src="../../../assets/mm-notification.png" height="300" alt="example screenshot of MetaMask notification" />
+  <p>Once you've reviewed the transaction details, click "Confirm" to commit the transaction.</p>
+
+  <p>After you confirm with MetaMask, your transaction will start deploying.</p>
+</ng-container>
+
+<ng-container *ngIf="state === sendingTransactionComponentState.AwaitingTransaction">
+  <h3 class="mat-subheading-2">We're sending your transaction to the blockchain</h3>
+  <mat-progress-spinner mode="indeterminate" color="accent"></mat-progress-spinner>
+  <div *ngIf="transactionHash && !isNotifyComplete">
+    <h3 class="mat-subheading-2">Let us notify you</h3>
+    <p>This process can take a long time. Enter your email address to be automatically notified when deployment finishes. We won't use this address for any other reasons, and we'll forget it as soon as we send you the notification.</p>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        [formControl]="email"
+        type="email"
+        placeholder="e.g., your@email.address">
+    </mat-form-field>
+    <button mat-button [disabled]="email.invalid" (click)="notify()">Notify me</button>
+  </div>
+  <div *ngIf="isNotifyComplete">
+    <p><mat-icon color="accent">done</mat-icon> Got it! We'll notify you when everything's ready.</p>
+  </div>
+</ng-container>

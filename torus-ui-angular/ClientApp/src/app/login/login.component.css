@@ -1,0 +1,31 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.or.mat-divider-vertical {
+  height: 100%;
+  width: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.or::after {
+  text-align: center;
+  content: 'OR';
+  margin-top: -0.75em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fafafa;
+  display: block;
+  width: 2em;
+}
+
+.or.mat-divider-vertical::after {
+  display: none;
+}

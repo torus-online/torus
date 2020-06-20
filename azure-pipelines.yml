@@ -1,0 +1,41 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+name: mvc2-$(Date:yyyyMMdd)$(Rev:.r)-beta
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+- script: dotnet build --configuration $(buildConfiguration)
+  workingDirectory: '$(System.DefaultWorkingDirectory)/torus-ui-angular'
+  displayName: 'dotnet build $(buildConfiguration)'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: publish
+    projects: '$(System.DefaultWorkingDirectory)/torus-ui-angular/torus-ui-angular.csproj'
+    publishWebProjects: True
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
+
+# this code takes all the files in $(Build.ArtifactStagingDirectory) and uploads them as an artifact of your build.
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: 'torus-ui-angular'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(7b753a22-9b28-4e77-8617-2cd53556f367)'
+    appType: 'webApp'
+    WebAppName: 'torus-beta'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'

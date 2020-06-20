@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+  <a
+    class="mat-icon-button"
+    [routerLinkActive]="['link-active']"
+    [routerLink]="['/' + (orgAddr$ | async)]"
+  >
+    <div class="button-content-wrapper">
+      <mat-icon>domain</mat-icon>
+      <span>Home</span>
+    </div>
+  </a>
+  <a
+    class="mat-icon-button"
+    [routerLinkActive]="['link-active']"
+    [routerLink]="['/' + (orgAddr$ | async) + '/operations']"
+  >
+    <div class="button-content-wrapper">
+      <mat-icon>business_center</mat-icon>
+      <span>Operations</span>
+    </div>
+  </a>
+  <a
+    class="mat-icon-button"
+    [routerLinkActive]="['link-active']"
+    [routerLink]="['/' + (orgAddr$ | async) + '/assets']"
+  >
+    <div class="button-content-wrapper">
+      <mat-icon>account_balance</mat-icon>
+      <span>Assets</span>
+    </div>
+  </a>
+</mat-toolbar>

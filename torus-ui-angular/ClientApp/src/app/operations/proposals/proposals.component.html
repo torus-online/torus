@@ -1,0 +1,21 @@
+<h3 class="mat-subheading-2">
+  Total: 25
+  <button
+    mat-icon-button
+    *ngIf="userPubKey$ | async"
+    (click)="openMoveDialog()"
+    aria-label="Send shares button"
+  >
+    <mat-icon>add_box</mat-icon>
+  </button>
+</h3>
+
+<h2 class="mat-title">Open</h2>
+<ol>
+  <li *ngFor="let p of openProposals$ | async">{{ p.proposalType }}</li>
+</ol>
+
+<h2 class="mat-title">Closed</h2>
+<ol>
+  <li *ngFor="let p of openProposals$ | async">{{ p.proposalType }} - {{ p.state }}</li>
+</ol>

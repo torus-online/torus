@@ -1,0 +1,6 @@
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 450px;
+}

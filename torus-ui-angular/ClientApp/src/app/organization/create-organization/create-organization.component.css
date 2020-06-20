@@ -1,0 +1,49 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.starting-shares-field {
+  width: 60px;
+}
+
+.starting-shares-multiplier-toggle {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.logo-url-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-url-input {
+  flex-grow: 1;
+}
+
+.logo-url-preview-wrapper {
+  text-align: center;
+}
+
+.logo-url-preview {
+  border: 1px solid rgba(0, 0, 0, 0.87);
+  border-radius: 2px;
+}
+
+.review-centered {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.review-centered h2.mat-title {
+  margin-bottom: 0;
+}
+
+.main-form {
+  margin-bottom: 100px;
+}

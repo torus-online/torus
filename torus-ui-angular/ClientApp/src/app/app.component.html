@@ -1,0 +1,5 @@
+<torus-nav-menu></torus-nav-menu>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<torus-bottom-nav-menu *ngIf="(isMvp2On$ | async) && (coreState.organization$ | async)"></torus-bottom-nav-menu>

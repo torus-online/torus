@@ -1,0 +1,6 @@
+mat-card {
+  width: 450px;
+  margin: 4px;
+  display: inline-block;
+  vertical-align: top;
+}

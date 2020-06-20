@@ -1,0 +1,36 @@
+<ng-container *ngIf="model">
+  <img alt="company logo" [src]="model.logoUrl">
+  <h1>
+    <span class="mat-headline">{{model.name}}</span>&nbsp;
+    <span class="mat-caption">{{model.contractAddress}}</span>
+    <div class="mat-subheading-2">{{model.mission}}</div>
+  </h1>
+</ng-container>
+
+<mat-card *ngIf="model">
+  <mat-card-title-group>
+    <mat-card-title>Shareholders</mat-card-title>
+    <mat-card-subtitle>
+      100 shares total
+      <button mat-icon-button *ngIf="userPubKey$ | async" (click)="openSendSharesDialog($event)" aria-label="Send shares button">
+        <mat-icon>send</mat-icon>
+      </button>
+    </mat-card-subtitle>
+  </mat-card-title-group>
+
+  <ol>
+    <li *ngFor="let sh of model.topShareholders">{{sh.name}} ({{sh.shareCount}})</li>
+  </ol>
+
+  <mat-card-actions>
+    <a mat-button [routerLink]="['/' + model.contractAddress + '/assets/shares']">More</a>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card *ngIf="model && (isMvp2On$ | async)">
+  <mat-card-title>Board of Directors</mat-card-title>
+
+  <ol>
+    <li *ngFor="let bm of model.boardMembers">{{bm}}</li>
+  </ol>
+</mat-card>

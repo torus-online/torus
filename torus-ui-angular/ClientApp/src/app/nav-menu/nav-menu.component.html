@@ -1,0 +1,42 @@
+<header>
+  <nav
+    class="navbar navbar-dark border-bottom box-shadow mb-3"
+  >
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">Torus</a>
+      <div class="navbar-nav flex-grow">
+        <a
+          *ngIf="!(isMvp2On$ | async) && (orgAddr$ | async)"
+          class="nav-item nav-link text-light"
+          [routerLinkActive]="['link-active']"
+          [routerLink]="['/' + (orgAddr$ | async) + '/assets/shares']"
+        >
+          Shares
+        </a>
+        <button
+          mat-button
+          *ngIf="userPubKey$ | async"
+          class="nav-item nav-link text-light"
+          (click)="logout()"
+        >
+          logout
+        </button>
+        <a
+          class="nav-item nav-link text-light"
+          href="https://torus.helpscoutdocs.com/"
+          target="_blank"
+        >
+          Help
+        </a>
+        <a
+          *ngIf="!(userPubKey$ | async)"
+          class="nav-item nav-link text-light"
+          [routerLinkActive]="['link-active']"
+          [routerLink]="['/']"
+        >
+          Login
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

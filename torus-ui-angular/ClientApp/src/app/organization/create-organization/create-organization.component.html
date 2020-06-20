@@ -1,0 +1,104 @@
+<form [formGroup]="form" (submit)="onFormSubmit()" class="main-form">
+  <mat-vertical-stepper linear>
+    <mat-step formGroupName="basic" [stepControl]="form.get('basic')" label="Basic Info">
+      <div class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" type="text" placeholder="Your organization's name">
+        </mat-form-field>
+        <p>Pick a name to represent your organization.</p>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Mission statement</mat-label>
+          <input matInput formControlName="mission" type="text" placeholder="One sentence to describe your purpose.">
+        </mat-form-field>
+        <p>Your mission statement will communicate your goals and values to both your members and the world.</p>
+
+        <button mat-button matStepperNext type="button">Next</button>
+      </div>
+    </mat-step>
+    <mat-step formGroupName="logo" [stepControl]="form.get('logo')" label="Logo">
+      <div class="example-form">
+        <div class="logo-url-preview-wrapper">
+          <img class="logo-url-preview" width="80" height="80" [src]="logoUrl$ | async" />
+        </div><br />
+        <div class="logo-url-container">
+          <mat-form-field class="logo-url-input">
+            <mat-label>Logo URL</mat-label>
+            <input #logoUrl matInput formControlName="logoUrl" type="url" placeholder="e.g. your-website.com/logo.png">
+          </mat-form-field>
+          <button
+            mat-icon-button
+            (click)="clearUrl($event)"
+            aria-label="Clear URL entry"
+          >
+            <mat-icon>backspace</mat-icon>
+          </button>
+        </div>
+        <p>Where can we find a logo to show the world? If you don't have one yet, you can use a temporary one automatically generated for you.</p>
+
+        <button mat-button matStepperPrevious type="button">Back</button>
+        <button mat-button matStepperNext type="button">Next</button>
+      </div>
+    </mat-step>
+    <mat-step formGroupName="shares" [stepControl]="form.get('shares')" label="Shares">
+      <div class="example-form">
+        <p>Shares represent ownership in your organization. Choose an amount of shares to start with that you can distribute to other people. You can divide your shares later if you need to give away smaller portions.</p>
+
+        <mat-label>Starting shares</mat-label><br />
+        <mat-form-field class="starting-shares-field">
+          <mat-label>Base</mat-label>
+          <input #sharesBase formControlName="sharesBase" matInput type="number" value="100">
+        </mat-form-field>
+        <mat-button-toggle-group
+          formControlName="sharesMultiplier"
+          #sharesMutiplier="matButtonToggleGroup"
+          name="shareMultiplier"
+          class="starting-shares-multiplier-toggle"
+          aria-label="Share Multiplier"
+        >
+          <mat-button-toggle value="1">x1</mat-button-toggle>
+          <mat-button-toggle value="10">x10</mat-button-toggle>
+          <mat-button-toggle value="1000">x1000</mat-button-toggle>
+        </mat-button-toggle-group>
+        <h2 class="mat-title"> {{ (sharesBase.value * sharesMutiplier.value).toLocaleString() }} total shares</h2>
+
+        <button mat-button matStepperPrevious type="button">Back</button>
+        <button mat-button matStepperNext type="button">Next</button>
+      </div>
+    </mat-step>
+    <mat-step formGroupName="auth" [stepControl]="form.get('auth')" label="Authentication">
+      <div class="example-form">
+        <mat-form-field id="address-selector" class="example-full-width">
+          <mat-select name="account" formControlName="walletAddress" placeholder="Your wallet address">
+            <mat-option *ngFor="let account of (accounts$ | async)" [value]="account">{{account}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p>This is the wallet address we'll send your shares to as well as withdraw ETH/ADA for gas.</p>
+
+        <button mat-button matStepperPrevious type="button">Back</button>
+        <button mat-button matStepperNext type="button">Next</button>
+      </div>
+    </mat-step>
+    <mat-step completed="false" label="Review">
+      <div class="example-form">
+        <h1 class="mat-headline">You're almost there!</h1>
+        <p>Take a moment to review your choices and make sure everything is right. When you're done, click 'Create'. If you need to edit anything, you can go back to an earlier step.</p>
+
+        <mat-divider></mat-divider>
+
+        <div class="review-centered">
+          <img class="logo-url-preview" width="80" height="80" [src]="logoUrl$ | async" />
+          <h2 class="mat-title">{{ form.get('basic.name').value }}</h2>
+          <h3 class="mat-subheading-2">{{ form.get('basic.mission').value }}</h3>
+          <h3 class="mat-subheading-2">
+            {{ (form.get('shares.sharesBase').value * form.get('shares.sharesMultiplier').value).toLocaleString() }} shares
+          </h3>
+        </div>
+
+        <button mat-button matStepperPrevious type="button">Back</button>
+        <button mat-button matStepperNext type="submit">Create</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+</form>
