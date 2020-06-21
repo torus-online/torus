@@ -25,3 +25,20 @@ https://secure.helpscout.net/docs/5ec291c1042863474d1aee5c/article/5ec3de1804286
 
 ## Newly Open-Sourced
 I created Torus out of the belief that open source software efforts could be coordinated more effectively by allowing smart contracts to organize a wide net of developers across the globe. Since I believe open source is the most natural fit for this application, I decided to open-source Torus to get the community involved as early as possible to help validate its use cases and contribute to development. Anyone with skills or knowledge with blockchian, governance, or software development are invited to get involved in the discussion and/or submit PRs.
+
+## Pre-requisites
+- [ASP.NET Core SDK 3.1]
+- [Node.js ^12.16.0]
+- [Truffle ^5.1.0] `npm install -g truffle`
+
+## Development environment
+We recommend Visual Studio Code for easy debugging.
+
+1. Clone this repo, `git clone https://github.com/torus-online/torus.git`
+1. Select correct Node.js version, `nvm use`
+1. Install dependencies, `cd ClientApp && npm install --no-save`
+1. Compile the Solidity contracts, `truffle compile`
+
+## Running the application
+1. Start the app in the "Run" tab in VS Code or, `dotnet run`.
+1. Visit the HTTPS site in a web browser - https://localhost:5001/
