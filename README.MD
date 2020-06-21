@@ -1,6 +1,8 @@
 ![Torus logo](https://torus-online.github.io/logo.png)
 ### Redefining global digital productivity
 
+[![Gitter](https://badges.gitter.im/torus-app/community.svg)](https://gitter.im/torus-app/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 Torus coordinates your team across the globe, secured by the blockchain -- independently managing all aspects.
 
 You may not personally know everyone who is important to your organization, but with Torus, there’s no need to worry about fraud, theft, or international payment complications.
