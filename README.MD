@@ -3,13 +3,7 @@
 
 [![Gitter](https://badges.gitter.im/torus-app/community.svg)](https://gitter.im/torus-app/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-Torus coordinates your team across the globe, secured by the blockchain -- independently managing all aspects.
-
-You may not personally know everyone who is important to your organization, but with Torus, there’s no need to worry about fraud, theft, or international payment complications.
-
-Torus creates smart contracts for you on the Ethereum blockchain to help you operate your digital organization. The reason Torus uses the blockchain instead of a more traditional, centralized approach is to guarantee that nobody owns any part of your organization except the real owners -- the shareholders.
-
-![Torus screenshot](https://torus-online.github.io/torus-screenshot.png)
+Our mission is to bring stability and productivity to open source projects through trustless governance technology.
 
 ## Status
 
