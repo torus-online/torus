@@ -35,7 +35,7 @@ I created Torus out of the belief that open source software efforts could be coo
 We recommend Visual Studio Code for easy debugging.
 
 1. Clone this repo, `git clone https://github.com/torus-online/torus.git`
-1. Install dependencies, `cd ClientApp && npm install --no-save`
+1. Install dependencies, `cd torus/torus-ui-angular/ClientApp && npm install --no-save`
 1. Compile the Solidity contracts, `truffle compile`
 
 ## Running the application
