@@ -1,5 +1,5 @@
 ![Torus logo](https://torus-online.github.io/logo.png)
-### Redefining global digital productivity
+### Pay contributors. Delight users. Enrich life.
 
 [![Gitter](https://badges.gitter.im/torus-app/community.svg)](https://gitter.im/torus-app/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
