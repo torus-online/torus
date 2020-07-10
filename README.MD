@@ -1,9 +1,13 @@
 ![Torus logo](https://torus-online.github.io/logo.png)
-### Pay contributors. Delight users. Enrich life.
+### "Pay your bills working on whatever you want"
 
 [![Gitter](https://badges.gitter.im/torus-app/community.svg)](https://gitter.im/torus-app/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-Our mission is to bring stability and productivity to open source projects through trustless governance technology.
+We believe that people involved in OSS can feel secure, collaborate better, and share in the value for their work through the adoption of a better governance system.
+
+Our mission is to provide stability and prosperity to open source software projects, by delivering a blockchain-based governance and treasury system that benefits all members OSS projects' life cycles.
+
+Using Torus, you can add structure to the thorny task of running OSS projects -- managing contributors, power structures, and compensation. It's is an easy-to-use GUI to deploy and interact with governance smart contracts on the Cardano blockchain. It provides safe and secure point-and-click digital governance to OSS software organizations.
 
 ## Status
 
