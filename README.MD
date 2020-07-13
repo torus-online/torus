@@ -1,8 +1,6 @@
 ![Torus logo](https://torus-online.github.io/logo.png)
 ### "Pay your bills working on whatever you want"
 
-[![Gitter](https://badges.gitter.im/torus-app/community.svg)](https://gitter.im/torus-app/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 We believe that people involved in OSS can feel secure, collaborate better, and share in the value for their work through the adoption of a better governance system.
 
 Our mission is to provide stability and prosperity to open source software projects, by delivering a blockchain-based governance and treasury system that benefits all members OSS projects' life cycles.
