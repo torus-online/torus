@@ -1,11 +1,15 @@
 ![Torus logo](https://torus-online.github.io/logo.png)
 ### "Pay your bills working on whatever you want"
 
-We believe that people involved in OSS can feel secure, collaborate better, and share in the value for their work through the adoption of a better governance system.
-
 Our mission is to provide stability and prosperity to open source software projects, by delivering a blockchain-based governance and treasury system that benefits all members OSS projects' life cycles.
 
-Using Torus, you can add structure to the thorny task of running OSS projects -- managing contributors, power structures, and compensation. It's is an easy-to-use GUI to deploy and interact with governance smart contracts on the Cardano blockchain. It provides safe and secure point-and-click digital governance to OSS software organizations.
+Using Torus, you can add structure to the thorny task of running OSS projects -- managing contributors, power structures, and compensation. Torus is an easy-to-use GUI to deploy and interact with smart contracts on the Cardano blockchain, providing safe and secure point-and-click digital governance to OSS software organizations.
+
+### Authoritarianism in the workplace is a 20th-century relic
+
+With the invention of the trustless ledger, co-operation between remote parties is now possible without centralized authority. With Torus, we believe opt-in collarboation is possible between organization members through the use of smart contracts. Smart contracts enforce unbreakable rules between members to a high degree of certainty.
+
+We that in the future, open-source will lead the market in innovation as contributors are enabled to give their best to meaningful projects.
 
 ## Status
 
