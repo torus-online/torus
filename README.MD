@@ -21,7 +21,7 @@ In the future, Torus will provide more advanced decentralized organization manag
 https://torus-ui.azurewebsites.net/0x773509458984befAD35B2CAD19D54aacc2ea2899
 
 ## FAQ
-https://secure.helpscout.net/docs/5ec291c1042863474d1aee5c/article/5ec3de18042863474d1aff26/
+https://torus.helpscoutdocs.com/article/6-faq
 
 ## Newly Open-Sourced
 I created Torus out of the belief that open source software efforts could be coordinated more effectively by allowing smart contracts to organize a wide net of developers across the globe. Since I believe open source is the most natural fit for this application, I decided to open-source Torus to get the community involved as early as possible to help validate its use cases and contribute to development. Anyone with skills or knowledge with blockchian, governance, or software development are invited to get involved in the discussion and/or submit PRs.
