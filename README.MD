@@ -1,15 +1,15 @@
 ![Torus logo](https://torus-online.github.io/logo.png)
-### "Pay your bills working on whatever you want"
+### "Work on your passion. Pay your bills."
 
-Our mission is to provide stability and prosperity to open source software projects, by delivering a blockchain-based governance and treasury system that benefits all members OSS projects' life cycles.
+Our mission is to provide stability and drive prosperity to open source software projects by delivering a blockchain-based governance and treasury system that OSS projects can use as a foundation.
 
-Using Torus, you can add structure to the thorny task of running OSS projects -- managing contributors, power structures, and compensation. Torus is an easy-to-use GUI to deploy and interact with smart contracts on the Cardano blockchain, providing safe and secure point-and-click digital governance to OSS software organizations.
+Torus adds structure to the thorny task of running OSS projects -- managing contribution, compensation, and power structures. Torus includes an easy-to-use GUI to deploy and interact with smart contracts on the Cardano blockchain, providing safe and secure point-and-click digital governance to OSS software organizations.
 
 ![](https://torus-online.github.io/torus-org-home.png)![](https://torus-online.github.io/torus-send-shares.png)![](https://torus-online.github.io/torus-create.png)
 
 ### Authoritarianism in the workplace is a 20th-century relic
 
-With the invention of the trustless ledger, co-operation between remote parties is now possible without centralized authority. With Torus, we believe opt-in collaboration is possible between organization members through the use of smart contracts. Smart contracts enforce unbreakable rules between members to a high degree of certainty.
+With the invention of the trustless ledger, co-operation between remote parties can be achieved without centralized authority. With Torus, we believe opt-in collaboration is possible between organization members through the use of smart contracts -- enforcing unbreakable rules between members to a high degree of certainty.
 
 We hope that in the future, open-source will lead the market in innovation as contributors are enabled to give their best to meaningful projects.
 
