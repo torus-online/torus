@@ -7,13 +7,13 @@ Using Torus, you can add structure to the thorny task of running OSS projects --
 
 ### Authoritarianism in the workplace is a 20th-century relic
 
-With the invention of the trustless ledger, co-operation between remote parties is now possible without centralized authority. With Torus, we believe opt-in collarboation is possible between organization members through the use of smart contracts. Smart contracts enforce unbreakable rules between members to a high degree of certainty.
+With the invention of the trustless ledger, co-operation between remote parties is now possible without centralized authority. With Torus, we believe opt-in collaboration is possible between organization members through the use of smart contracts. Smart contracts enforce unbreakable rules between members to a high degree of certainty.
 
 We hope that in the future, open-source will lead the market in innovation as contributors are enabled to give their best to meaningful projects.
 
 ## Status
 
-Torus is currently in the earliest stages of development. We've only rolled out the smallest set of viable features to validate them before we move onto more advanced features. At this time, Torus can deploy a smart contract to the Ethereum blockchain to identify an organization and who are the owners, including the ability to transfer ownership. As soon as a publi cCardano Goguen testnet is online and the Plutus specification is stabilized, we will begin the work of migrating Torus over to Cardano. Cardano part of my original inspiration for this project, and I believe is has a more solid foundation and forward trajectory than Ethereum does.
+Torus is currently in the earliest stages of development. We've only rolled out the smallest set of viable features to validate them before we move onto more advanced features. At this time, Torus can deploy a smart contract to the Ethereum blockchain to identify an organization and who are the owners, including the ability to transfer ownership. As soon as a public Cardano Goguen testnet is online and the Plutus specification is stabilized, we will begin the work of migrating Torus over to Cardano. Cardano part of my original inspiration for this project, and I believe is has a more solid foundation and forward trajectory than Ethereum does.
 
 In the future, Torus will provide more advanced decentralized organization management features, such as governance, policy creation, and treasury management.
 
