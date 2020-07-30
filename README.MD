@@ -5,6 +5,8 @@ Our mission is to provide stability and prosperity to open source software proje
 
 Using Torus, you can add structure to the thorny task of running OSS projects -- managing contributors, power structures, and compensation. Torus is an easy-to-use GUI to deploy and interact with smart contracts on the Cardano blockchain, providing safe and secure point-and-click digital governance to OSS software organizations.
 
+![](https://torus-online.github.io/torus-org-home.png)![](https://torus-online.github.io/torus-send-shares.png)![](https://torus-online.github.io/torus-create.png)
+
 ### Authoritarianism in the workplace is a 20th-century relic
 
 With the invention of the trustless ledger, co-operation between remote parties is now possible without centralized authority. With Torus, we believe opt-in collaboration is possible between organization members through the use of smart contracts. Smart contracts enforce unbreakable rules between members to a high degree of certainty.
