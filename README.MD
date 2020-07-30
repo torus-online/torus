@@ -9,7 +9,7 @@ Using Torus, you can add structure to the thorny task of running OSS projects --
 
 With the invention of the trustless ledger, co-operation between remote parties is now possible without centralized authority. With Torus, we believe opt-in collarboation is possible between organization members through the use of smart contracts. Smart contracts enforce unbreakable rules between members to a high degree of certainty.
 
-We that in the future, open-source will lead the market in innovation as contributors are enabled to give their best to meaningful projects.
+We hope that in the future, open-source will lead the market in innovation as contributors are enabled to give their best to meaningful projects.
 
 ## Status
 
