@@ -15,7 +15,7 @@ We hope that in the future, open-source will lead the market in innovation as co
 
 ## Status
 
-Torus is currently in the earliest stages of development. We've only rolled out the smallest set of viable features to validate them before we move onto more advanced features. At this time, Torus can deploy a smart contract to the Ethereum blockchain to identify an organization and who are the owners, including the ability to transfer ownership. As soon as a public Cardano Goguen testnet is online and the Plutus specification is stabilized, we will begin the work of migrating Torus over to Cardano. Cardano part of my original inspiration for this project, and I believe is has a more solid foundation and forward trajectory than Ethereum does.
+Torus is currently in the earliest stages of development. We've only rolled out the smallest set of viable features to validate them before we move onto more advanced features. At this time, Torus can deploy a smart contract to the Ethereum blockchain to identify an organization and who are the owners, including the ability to transfer ownership. As soon as a public Cardano Goguen testnet is online and the Plutus specification is stabilized, we will begin the work of migrating Torus over to Cardano. Cardano part of my original inspiration for this project, and we believe is has a more solid foundation and forward trajectory than Ethereum does.
 
 In the future, Torus will provide more advanced decentralized organization management features, such as governance, policy creation, and treasury management.
 
