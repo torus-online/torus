@@ -43,3 +43,6 @@ We recommend Visual Studio Code for easy debugging.
 ## Running the application
 1. Start the app in the "Run" tab in VS Code or, `dotnet run`.
 1. Visit the HTTPS site in a web browser - https://localhost:5001/
+
+## Credits
+Thanks to [Chris Koeth](http://chriskoeth.webflow.io/) for designing our wonderful logo!
